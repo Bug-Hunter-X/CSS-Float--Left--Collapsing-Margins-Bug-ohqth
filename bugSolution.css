@@ -1,0 +1,33 @@
+The following corrected CSS code resolves the collapsing margin issue:
+
+**Method 1: Using `overflow: hidden;`**
+
+```css
+div {
+  width: 50%;
+  float: left;
+  overflow: hidden; /* Prevents margin collapsing */
+}
+```
+
+**Method 2: Using clearfix**
+
+```css
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+div {
+  width: 50%;
+  float: left;
+}
+
+/* Apply the clearfix to the parent container */
+.parent {
+  .clearfix
+}
+```
+
+These methods ensure proper layout regardless of browser differences.
