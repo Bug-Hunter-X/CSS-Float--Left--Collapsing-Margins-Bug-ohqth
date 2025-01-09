@@ -1,0 +1,10 @@
+The following CSS code results in unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue arises because the `float: left;` property can cause unexpected collapsing margins if not handled correctly. This could lead to unexpected layout changes or the inability to create precise layouts. The problem may occur inconsistently across different browsers due to variations in their CSS rendering engines.
